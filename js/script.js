@@ -33,7 +33,7 @@
 const arrayElement = [...document.querySelectorAll("li")];
 
 arrayElement.map((el,key)=>{
-    if(el.innerText.indexOf("1",0) {
+    if(el.innerText.indexOf_)("1",0) {
         el.textContent = `[ ${el.textContent}"Item-1"]`;
     }
 
