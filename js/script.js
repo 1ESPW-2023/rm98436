@@ -1,8 +1,4 @@
-
-//Exemplo de Funções
-
 // //Exemplo de Funções
-
 // const divElement = document.getElementById("div-box")
 
 // // divElement.addEventListener("click", ()=>{
@@ -10,9 +6,6 @@
 // // });
 
 // divElement.addEventListener("click", mostraElemento);
-
-
-
 
 
 // function mostraElemento() {
@@ -24,32 +17,6 @@
 //     let n2 = 5
 //     console.log(n1 + n2)
 // }
-
-
-//Recuperando Elementos do HTML com querySelector
-// const liElement = document.querySelectorAll("li");
-
-// //Convertendo Node List em Array com Spread
-// const arrayElement = [...liElement];
-
-
-// console.log(liElement);
-
-
-// const liElement = document.querySelectorAll("li");
-
-//Convertendo Node List em Array com Spread
-// const arrayElement = [...document.querySelectorAll("li")];
-
-// arrayElement.map((el,key)=>{
-//     if(el.innerText.indexOf_)("1",0) 
-//         el.textContent = `[ ${el.textContent}"Item-1"]`;
-    
-
-// });
-
-
-
  
 
 // //Recuperando elementos do HTML com querySelector
@@ -72,9 +39,7 @@
 //         el.textContent = `[ ${el.textContent} ]`;
 //     }
 // });
-
 let tmp = 0;
-
 
 function mudaCor() {
     let r = Math.ceil(Math.random()*255);
@@ -86,16 +51,44 @@ function mudaCor() {
         el.style.backgroundColor = `rgb(${r},${g},${b})`;
     } )
 
-
-   tmp = setTimeout(mudaCor, 5000);
-
-}
-
-function pararTimeOut() {
-    clearTimeout(tmp);
-
    tmp = setTimeout(mudaCor, 1000);
 
 }
 
-mudaCor()
+function alteraBanner1() {
+    
+    // let nr = Math.ceil(Math.random() *3);
+    const img1 = document.querySelector(".l-d > img");
+    const img2 = document.querySelector(".l-e > img");
+    img1.src = "./img/banner-lateral-1.png";
+    img2.src = "./img/banner-lateral-2.png";
+
+    setTimeout(alteraBanner2, 1000);
+
+}
+ 
+function alteraBanner2() {
+    
+    // let nr = Math.ceil(Math.random() *3);
+    const img1 = document.querySelector(".l-d > img");
+    const img2 = document.querySelector(".l-e > img");
+    img1.src = "./img/banner-lateral-2.png";
+    img2.src = "./img/banner-lateral-1.png";
+
+    setTimeout(alteraBanner3, 1000);
+
+}
+
+function alteraBanner3() {
+    
+    // let nr = Math.ceil(Math.random() *3);
+    const img1 = document.querySelector(".l-d > img");
+    const img2 = document.querySelector(".l-e > img");
+    img1.src = "./img/banner-lateral-1.png";
+    img2.src = "./img/banner-lateral-2.png";
+
+    setTimeout(alteraBanner1, 1000);
+
+}
+
+alteraBanner1();
