@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 //Exemplo de Funções
+=======
+// //Exemplo de Funções
+>>>>>>> main
 // const divElement = document.getElementById("div-box")
 
 // // divElement.addEventListener("click", ()=>{
@@ -7,6 +11,10 @@
 
 // divElement.addEventListener("click", mostraElemento);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 // function mostraElemento() {
 //     console.log(divElement)
 // }
@@ -16,6 +24,7 @@
 //     let n2 = 5
 //     console.log(n1 + n2)
 // }
+<<<<<<< HEAD
 
 //Recuperando Elementos do HTML com querySelector
 // const liElement = document.querySelectorAll("li");
@@ -40,6 +49,30 @@
 // });
 
 
+=======
+ 
+
+// //Recuperando elementos do HTML com querySelector
+// const liElements = document.querySelector("#item");
+// console.log(liElements);
+
+
+// //Recuperando elementos do HTML com querySelectorAll
+// const liElements = document.querySelectorAll("li");
+// //CONVERTENDO NODE LIST EM ARRAY COM SPREAD
+// const arrayElements = [...liElements];
+// console.log(arrayElements);
+
+//CONVERTENDO NODE LIST EM ARRAY COM SPREAD
+// const arrayElements = [...document.querySelectorAll("li")];
+
+// arrayElements.map((el,key)=>{
+
+//     if (el.textContent.indexOf("1") != (-1)) {
+//         el.textContent = `[ ${el.textContent} ]`;
+//     }
+// });
+>>>>>>> main
 let tmp = 0;
 
 
@@ -53,12 +86,17 @@ function mudaCor() {
         el.style.backgroundColor = `rgb(${r},${g},${b})`;
     } )
 
+<<<<<<< HEAD
    tmp = setTimeout(mudaCor, 5000);
 
 }
 
 function pararTimeOut() {
     clearTimeout(tmp);
+=======
+   tmp = setTimeout(mudaCor, 1000);
+
+>>>>>>> main
 }
 
 mudaCor()
