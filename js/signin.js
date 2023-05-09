@@ -16,12 +16,8 @@ let listaDeUsuarios = [];
 listaDeUsuarios.push(usuario1);
 listaDeUsuarios.push(usuario2);
 
-// listaDeUsuarios.forEach( (usuario)=>{
-    
-//     console.log("NOME DE USUÁRIO : " + usuario.nomeUsuario);
-//     console.log("SENHA DE USUÁRIO : " + usuario.senhaUsuario);
-
-// });
+//Adicionando a lista de OBJETOS no localStorage
+localStorage.setItem("listaUser", JSON.stringify(listaDeUsuarios));
 
 
 addEventListener("click", (evt)=>{
@@ -30,16 +26,17 @@ addEventListener("click", (evt)=>{
         let usuarioInput = document.querySelector("#usuario").value;
         let senhaInput = document.querySelector("#senha").value;
 
-
         try{
 
-            listaDeUsuarios.forEach((usuario)=>{
+            let listaUser = JSON.parse(localStorage.getItem("listaUser"));
+
+            listaUser.forEach((usuario)=>{
 
                 if(usuarioInput == usuario.nomeUsuario && senhaInput == usuario.senhaUsuario){
                     throw "USUÁRIO VALIDADO!";
                 }
             });
-            throw "USU"
+            throw "SENHA OU NOME DE USUÁRIO INVÁLIDO!";
         }catch(err){
             if(err == "USUÁRIO VALIDADO!"){
                 console.log("USUÁRIO VALIDADO!");
@@ -51,7 +48,6 @@ addEventListener("click", (evt)=>{
 
 
     }
-});
-           
+});    
 
 
