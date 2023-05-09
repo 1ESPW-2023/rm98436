@@ -30,10 +30,21 @@ addEventListener("click", (evt)=>{
         let usuarioInput = document.querySelector("#usuario").value;
         let senhaInput = document.querySelector("#senha").value;
 
-        if(usuarioInput == "pf0670" && senhaInput == "12345"){
-            console.log("USUÁRIO VALIDADO!");
-        }else{
-            console.log("SENHA OU NOME DE USUÁRIO INVÁLIDO!");
-        }   
+        listaDeUsuarios.forEach((usuario)=>{
+
+            if(usuarioInput == usuario.nomeUsuario && senhaInput == usuario.senhaUsuario){
+                console.log("USUÁRIO VALIDADO!");
+            }else{
+                console.log("SENHA OU NOME DE USUÁRIO INVÁLIDO!");
+            }
+
+        });
+
+           
+
+
     }
 });
+           
+
+
