@@ -36,14 +36,10 @@ addEventListener("click", (evt)=>{
             listaDeUsuarios.forEach((usuario)=>{
 
                 if(usuarioInput == usuario.nomeUsuario && senhaInput == usuario.senhaUsuario){
-            
                     throw "USUÁRIO VALIDADO!";
-
-                }else{
-
-                    throw "SENHA OU NOME DE USUÁRIO INVÁLIDO!";
                 }
             });
+            throw "USU"
         }catch(err){
             if(err == "USUÁRIO VALIDADO!"){
                 console.log("USUÁRIO VALIDADO!");
