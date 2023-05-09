@@ -41,17 +41,17 @@ addEventListener("click", (evt)=>{
             if(err == "USUÁRIO VALIDADO!"){
                 
                 msgError.setAttribute("style","color:#00ff00;")
-                msgError.innerHTML = "<strong>Usúario Validado</strong>"
+                msgError.innerHTML = "<strong>Usuário validado!</strong>"
 
-                console.log("USUÁRIO VALIDADO!");
             }else{
-                console.log("SENHA OU NOME DE USUÁRIO INVÁLIDO!");
+                msgError.setAttribute("style","color:#ff0000;")
+                msgError.innerHTML = "<strong>Senha ou nome de Usuário inválidos!</strong>"
             }
         }
            
 
 
     }
-});   
+});  
 
 
