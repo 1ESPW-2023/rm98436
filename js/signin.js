@@ -19,12 +19,12 @@ listaDeUsuarios.push(usuario2);
 //Adicionando a lista de OBJETOS no localStorage
 localStorage.setItem("listaUser", JSON.stringify(listaDeUsuarios));
 
-
 addEventListener("click", (evt)=>{
     if(evt.target.id == "btnSubmit"){
 
         let usuarioInput = document.querySelector("#usuario").value;
         let senhaInput = document.querySelector("#senha").value;
+        const msgError = document.querySelector("#msgError");
 
         try{
 
@@ -39,6 +39,10 @@ addEventListener("click", (evt)=>{
             throw "SENHA OU NOME DE USUÁRIO INVÁLIDO!";
         }catch(err){
             if(err == "USUÁRIO VALIDADO!"){
+                
+                msgError.setAttribute("style","color:#00ff00;")
+                msgError.innerHTML = "<strong>Usúario Validado</strong>"
+
                 console.log("USUÁRIO VALIDADO!");
             }else{
                 console.log("SENHA OU NOME DE USUÁRIO INVÁLIDO!");
@@ -48,6 +52,6 @@ addEventListener("click", (evt)=>{
 
 
     }
-});    
+});   
 
 
